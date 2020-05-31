@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>My-Lab</title>
+    <meta charset="utf-8">
+    <meta content="A simple blogging theme" name="description">
+    <meta content="Shuami Labs" name="author">
+    <meta content="Copyright 2020 Shuami Labs. All rights reserved." name="copyright">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:4000/assets/images/favicon-16x16.png">
+    <link href="http://localhost:4000/assets/css/main.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="main">
+        <div id="nav-top">
+    <div id="nav-menu-left">
+        <a href="https://github.com/shuamilabs" target="_blank">
+            <svg class="svg-icon">
+            <use xlink:href="/assets/images/minima-social-icons.svg#github"></use>
+            </svg>
+        </a>
+        <a href="https://instagram.com/shuamilabs" target="_blank">
+            <svg class="svg-icon">
+            <use xlink:href="/assets/images/minima-social-icons.svg#instagram"></use>
+            </svg>
+        </a>
+        <a href="https://facebook.com/shuamilabs" target="_blank">
+            <svg class="svg-icon">
+            <use xlink:href="/assets/images/minima-social-icons.svg#facebook"></use>
+            </svg>
+        </a>
+        <a href="https://www.youtube.com/channel/UC1CaCMwJq3qd0I1yOf4uO8Q" target="_blank">
+            <svg class="svg-icon">
+            <use xlink:href="/assets/images/minima-social-icons.svg#youtube"></use>
+            </svg>
+        </a>
+    </div>
+    
+    <div id="nav-menu-right">
+        <div id="home-menu">
+            <a href="http://localhost:4000/">
+                <img src="http://localhost:4000/assets/images/home.png" alt="home">
+            </a>
+        </div> /
+        <a href="http://localhost:4000/project/">Projek</a> /
+        <a href="http://localhost:4000/categories/">Kategori</a>
+    </div>
+</div>
+
+<div id="nav" class="cat-menu">
+    
+        <a href="http://localhost:4000/categories/umum/">umum</a>&nbsp;
+    
+        <a href="http://localhost:4000/categories/teknikal-ict/">teknikal-ict</a>&nbsp;
+    
+</div>
+        <div id="content-left">
+            <div id="post">
+                <h2>Pemasangan Node Menggunakan NVM dalam macOS</h2>
+                <i>posted on 30 May 2020 by Ahmad Shuami</i>
+                <p>Assalamualaikum dan Salam Sejahtera.</p>
+
+<p>Hai semua. Hari ini saya ingin kongsikan bagaimana anda boleh memasang node di dalam macOS. Banyak kaedah yang boleh digunakan, antaranya menggunakan homebrew, installer node dan juga menerusi nvm. Perkongsian saya kali ini adalah cara memasang node menggunakan nvm.</p>
+
+<!-- more -->
+
+<p><img src="/assets/images/nvm.jpg# thumbnail bordered" alt="" /></p>
+
+<p><strong>Langkah #1</strong></p>
+
+<p>Muat turun dan pasang skrip nvm menggunakan curl. Buka terminal anda dan jalankan perintah di bawah. Tunggu sehingga skrip dipasang selesai.</p>
+
+<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="go">curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.35.2/install.sh | bash</span></code></pre></figure>
+
+<ul>
+  <li>v0.35.2 adalah versi terkini semasa hantaran ini ditulis. Anda boleh mengemaskini versi selepas ini.</li>
+</ul>
+
+<p><strong>Langkah #2</strong></p>
+
+<p>Periksa versi nvm anda di terminal menggunakan perintah seperti di bawah.</p>
+
+<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="go">nvm --version</span></code></pre></figure>
+
+<p><strong>Langkah #3.1</strong></p>
+
+<p>Seterusnya, kita akan memasang node.js. Jika anda ingin memasang node yang terbaharu, gunakan perintah di bawah.</p>
+
+<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="go">nvm install node</span></code></pre></figure>
+
+<p><strong>Langkah #3.2</strong></p>
+
+<p>Jika anda ingin memasang versi stabil yang terbaharu, gunakan perintah di bawah.</p>
+
+<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="go">nvm install --lts</span></code></pre></figure>
+
+<p><strong>Langkah #4</strong></p>
+
+<p>Anda boleh mengesahkan versi node dan npm (npm dipasang secara automatik semasa pemasangan node) dengan perintah seperti di bawah.</p>
+
+<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="go">node -v
+npm -v</span></code></pre></figure>
+
+<p>** Nota yang berguna</p>
+
+<p>Jika anda ingin mengemaskini nvm kepada versi terbaharu, sila ikuti langkah di <strong>Langkah #1</strong>. Anda boleh semak versi terbaharu nvm di <a href="https://github.com/nvm-sh/nvm">sini</a>. Jika anda ingin mengemaskini node kepada versi terbaharu, sila ikuti langkah-langkah di bawah.</p>
+
+<p>Jika anda memasang node menggunakan kaedah seperti di <strong>Langkah #3.1</strong>, kemaskini node dengan perintah.</p>
+
+<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="go">nvm install node --reinstall-packages-from=node</span></code></pre></figure>
+
+<p>Jika anda memasang node menggunakan kaedah seperti di <strong>Langkah #3.2</strong>, kemaskini node dengan perintah.</p>
+
+<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="go">nvm install lts/* --reinstall-packages-from=node</span></code></pre></figure>
+
+<p>Untuk melihat senarai semua node yang telah dipasang.</p>
+
+<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="go">nvm list</span></code></pre></figure>
+
+<p>Jika anda telah memasang banyak versi node, anda boleh setkan default node yang diinginkan. Jalankan perintah di bawah.</p>
+<ul>
+  <li>set default node kepada node terbaharu yang telah dipasang</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="go">nvm use node</span></code></pre></figure>
+
+<ul>
+  <li>set default node kepada node versi stabil terbaharu yang telah dipasang</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="go">nvm use --lts</span></code></pre></figure>
+
+<p>Jadi, itu sahaja secara ringkas bagaimana anda boleh menggunakan nvm untuk memasang node. Cara ini membolehkan kita memasang banyak versi node di dalam komputer kita. Selamat mencuba.</p>
+
+<p>#persistence #perfection #success #doausahatawakal</p>
+
+                
+                    <div id="categories">
+                        <p id="post-cat"><b>Categories:</b>&nbsp;
+                            
+                            <a href="http://localhost:4000/categories/teknikal-ict/">teknikal-ict</a>&nbsp;
+                            
+                        </p>
+                    </div>
+                
+                
+            </div>
+        </div>
+
+        <div id="footer">
+    <p>
+        © 2020 Shuami Labs ·
+        <a href="http://localhost:4000/about/">?Saya?</a>
+    </p>
+</div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>My-Lab</title>
+    <meta charset="utf-8">
+    <meta content="A simple blogging theme" name="description">
+    <meta content="Shuami Labs" name="author">
+    <meta content="Copyright 2020 Shuami Labs. All rights reserved." name="copyright">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:4000/assets/images/favicon-16x16.png">
+    <link href="http://localhost:4000/assets/css/main.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="main">
+        <div id="nav-top">
+    <div id="nav-menu-left">
+        <a href="https://github.com/shuamilabs" target="_blank">
+            <svg class="svg-icon">
+            <use xlink:href="/assets/images/minima-social-icons.svg#github"></use>
+            </svg>
+        </a>
+        <a href="https://instagram.com/shuamilabs" target="_blank">
+            <svg class="svg-icon">
+            <use xlink:href="/assets/images/minima-social-icons.svg#instagram"></use>
+            </svg>
+        </a>
+        <a href="https://facebook.com/shuamilabs" target="_blank">
+            <svg class="svg-icon">
+            <use xlink:href="/assets/images/minima-social-icons.svg#facebook"></use>
+            </svg>
+        </a>
+        <a href="https://www.youtube.com/channel/UC1CaCMwJq3qd0I1yOf4uO8Q" target="_blank">
+            <svg class="svg-icon">
+            <use xlink:href="/assets/images/minima-social-icons.svg#youtube"></use>
+            </svg>
+        </a>
+    </div>
+    
+    <div id="nav-menu-right">
+        <div id="home-menu">
+            <a href="http://localhost:4000/">
+                <img src="http://localhost:4000/assets/images/home.png" alt="home">
+            </a>
+        </div> /
+        <a href="http://localhost:4000/project/">Projek</a> /
+        <a href="http://localhost:4000/categories/">Kategori</a>
+    </div>
+</div>
+
+<div id="nav" class="cat-menu">
+    
+        <a href="http://localhost:4000/categories/umum/">umum</a>&nbsp;
+    
+        <a href="http://localhost:4000/categories/teknikal-ict/">teknikal-ict</a>&nbsp;
+    
+</div>
+        <div id="content-left">
+            <div id="post">
+                <h2>Jana Fail CSR di Pelayan Windows</h2>
+                <i>posted on 30 May 2020 by Ahmad Shuami</i>
+                <p>Assalamualaikum dan Salam Sejahtera.</p>
+
+<p>Perkongsian hari ini adalah berkenaan langkah-langkah untuk menghasilkan fail CSR di dalam pelayan Windows. Fail CSR ini diperlukan semasa anda ingin memohon atau membeli sijil SSL (secure socket layer) untuk menggunakan https pada domain anda. Anda boleh juga menggunakan tool yang sedia ada di internet. Jom kita lihat cara-cara menggunakan perintah di command prompt.
+<!-- more -->
+Caranya mudah dan cepat. sila ikuti langkah-langkah di bawah.</p>
+
+<p><strong>Langkah #1</strong></p>
+
+<p>Pastikan server anda telah dipasang dengan Apache dan Openssl.</p>
+
+<p><strong>Langkah #2</strong></p>
+
+<p>Buka command prompt anda (as administrator). Setkan path bagi OPENSSL_CONF seperti di bawah.</p>
+
+<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="go">set OPENSSL_CONF=C:\Apache24\conf\openssl.cnf</span></code></pre></figure>
+
+<p>Path ini adalah bergantung kepada di mana anda memasang Apache di komputer anda.</p>
+
+<p><strong>Langkah #3</strong></p>
+
+<p>Buka direktori bin di mana pelayan web anda berada. Sebagai contoh, saya telah memasang pelayan web Apache di direktori C:\Apache24. Jadi, saya buka direktori bin seperti di bawah.</p>
+
+<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="go">cd Apache24\bin</span></code></pre></figure>
+
+<p><strong>Langkah #4</strong></p>
+
+<p>Seterusnya, taipkan perintah seperti di bawah untuk menghasilkan fail .csr dan fail .key. Fail-fail ini perlu disertakan semasa permohonan atau pembelian sijil SSL nanti.</p>
+
+<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="go">openssl req -new -out myserver.csr -newkey rsa:2048 -nodes -keyout myserver.key</span></code></pre></figure>
+
+<p>Anda akan ditanya dengan beberapa soalan sebelum fail-fail dihasilkan. Jawab soalan-soalan yang telah diberikan. Antara soalan yang perlu dijawab, sebagai contohnya;</p>
+
+<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="go">Country Name : MY
+Organization Name : My Company
+Organizational Unit : My System
+Common Name : myserver.com</span></code></pre></figure>
+
+<p><img src="/assets/images/csr.png# thumbnail bordered" alt="" /></p>
+
+<p><strong>Langkah #5</strong></p>
+
+<p>Tekan [Enter] untuk menghasilkan fail. Jika anda menggunakan perintah seperti di <strong>Langkah #4</strong>, dua (2) fail iaitu myserver.csr dan myserver.key akan dijana di dalam direktori C:\Apache24\bin. Sila simpan fail-fail ini sebaik-baiknya.</p>
+
+<p>Ok, anda sudah berjaya menghasilan fail csr bagi tujuan memohon atau pembelian sijil SSL. Selamat mencuba.</p>
+
+<p>#persistence #perfection #success #doausahatawakal</p>
+
+                
+                    <div id="categories">
+                        <p id="post-cat"><b>Categories:</b>&nbsp;
+                            
+                            <a href="http://localhost:4000/categories/teknikal-ict/">teknikal-ict</a>&nbsp;
+                            
+                        </p>
+                    </div>
+                
+                
+            </div>
+        </div>
+
+        <div id="footer">
+    <p>
+        © 2020 Shuami Labs ·
+        <a href="http://localhost:4000/about/">?Saya?</a>
+    </p>
+</div>
+
+    </div>
+</body>
+
+</html>
