@@ -57,19 +57,60 @@
         <a href="/categories/teknikal-ict/">teknikal-ict</a>&nbsp;
     
 </div>
-
         <div id="content-left">
-            <ul class="post-list">
+            <div id="post">
+                <h2>Pemasangan Composer di dalam macOS</h2>
+                <i>posted on 8 Jun 2020 by Ahmad Shuami</i>
+                <p>Assalamualaikum dan Salam Sejahtera.</p>
+
+<p>Perkongsian hari ini adalah berkenaan langkah-langkah untuk memasang composer di dalam komputer Mac. Untuk memasang composer, pastikan anda telah membuat pemasangan PHP terlebih dahulu. Jom kita lihat cara-cara menggunakan perintah di command prompt. Caranya mudah dan cepat. sila ikuti langkah-langkah di bawah.
+<!-- more --></p>
+
+<p><strong>Langkah #1</strong></p>
+
+<p>Muat turun fail composer.phar di <a href="https://getcomposer.org/download/1.10.7/composer.phar">compoer</a></p>
+
+<p><strong>Langkah #2</strong></p>
+
+<p>Pindahkan fail composer.phar anda ke direktori /usr/local/bin/composer</p>
+
+<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="go">mv your_download_path/composer.phar /usr/local/bin/composer</span></code></pre></figure>
+
+<p><strong>Langkah #3</strong></p>
+
+<p>Ubah permission fail composer.phar anda.</p>
+
+<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="go">chmod +x /usr/local/bin/composer</span></code></pre></figure>
+
+<p><strong>Langkah #4</strong></p>
+
+<p>Lihat versi composer yang telah berjaya dipasang.</p>
+
+<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="go">composer -V</span></code></pre></figure>
+
+<p><strong>Langkah #5</strong></p>
+
+<p>Jika anda ingin menyahpasang composer, anda ikuti langkah di bawah.</p>
+
+<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="go">cd /usr/local/bin/
+rm -r composer</span></code></pre></figure>
+
+<p>Ok, anda sudah berjaya memasang composer di dalam komputer anda. Anda juga boleh mencuba untuk menyahpasang composer. Selamat mencuba.</p>
+
+<p>#persistence #perfection #success #doausahatawakal</p>
+
                 
-                  <li>
-                    <h3>→ <a class="post-link" href="/umum/2020/05/29/koding-ok-atau-tidak/">Koding, OK atau Tidak</a></h3>
-                    <i>posted on 29 May 2020 by Ahmad Shuami</i>
-                  </li>
+                    <div id="categories">
+                        <p id="post-cat"><b>Categories:</b>&nbsp;
+                            
+                            <a href="/categories/teknikal-ict/">teknikal-ict</a>&nbsp;
+                            
+                        </p>
+                    </div>
                 
-            </ul>
+                
+            </div>
         </div>
-        
-        
 
         <div id="footer">
     <p>
@@ -77,7 +118,7 @@
         <a href="/about/">?Saya?</a>
     </p>
 </div>
-        
+
     </div>
 </body>
 

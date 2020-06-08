@@ -59,55 +59,40 @@
 </div>
         <div id="content-left">
             <div id="post">
-                <h2>Pemasangan Angular CLI</h2>
-                <i>posted on 30 May 2020 by Ahmad Shuami</i>
+                <h2>Pemasangan Homebrew di dalam macOS</h2>
+                <i>posted on 8 Jun 2020 by Ahmad Shuami</i>
                 <p>Assalamualaikum dan Salam Sejahtera.</p>
 
-<p>Hai, anda semua sihat hari ini? Anda ingin berjinak-jinak dengan Angular? Bagi anda yang ingin mencuba rangka kerja Angular ini, perkara pertama adalah, anda perlu memasang dahulu angular cli di dalam komputer anda. Sebelum itu, pastikan komputer anda telah dipasang dengan node.js.
-<!-- more -->
-Sila rujuk hantaran saya mengenai <a href="https://shuamilabs.github.io/teknikal-ict/2020/05/30/pemasangan-node-menggunakan-nvm-dalam-macos">pemasangan node.js menggunakan nvm</a> terlebih dahulu jika belum memasang node.js. Untuk tutorial ini, saya menggunakan Mac. OK, tidak perlu berceloteh panjang, sila ikuti langkah-langkah di bawah.</p>
+<p>Perkongsian hari ini adalah berkenaan langkah-langkah untuk memasang hombrew di dalam komputer Mac. Homebrew merupakan Package Manager untuk memasang perisian di dalam Mac anda. Jom kita lihat cara-cara menggunakan perintah di command prompt. Caranya mudah dan cepat. sila ikuti langkah-langkah di bawah.
+<!-- more --></p>
 
 <p><strong>Langkah #1</strong></p>
 
-<p>Pastikan anda telah memasang node. Periksa versi node anda.</p>
+<p>Pastikan anda telah memasang xcode command line di dalam komputer Mac anda.</p>
 
-<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="go">node -v</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="go">xcode-select --install</span></code></pre></figure>
 
 <p><strong>Langkah #2</strong></p>
 
-<p>Jika node telah dipasang, jalankan perintah di bawah.</p>
+<p>Jika anda telah memasang xcode command line, teruskan dengan pemasangan Homebrew seperti di bawah.</p>
 
-<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="go">npm install -g @angular/cli</span></code></pre></figure>
-
-<p>Arahan di atas akan memasang angular cli versi terbaharu. Sila tunggu sehingga pemasangan selesai. Setelah selesai, jalankan perintah di bawah.</p>
-
-<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="go">ng v</span></code></pre></figure>
-
-<p>Yeay, anda telah berjaya membuat pemasangan Angular cli ke dalam komputer anda.</p>
+<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="gp">/bin/bash -c "$</span><span class="o">(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/master/install.sh<span class="o">)</span><span class="s2">"</span></code></pre></figure>
 
 <p><strong>Langkah #3</strong></p>
 
-<p>Buka terminal anda, pergi ke direktori projek anda dan jalankan perintah ini.</p>
+<p>Tunggu sehingga pemasangan selesai. Anda perlu memasukkan kata laluan semasa pemasangan ini dibuat. Setelah selesai, anda boleh mengesahkan versi homebrew yang telah dipasang.</p>
 
-<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="go">ng new my-first-angular</span></code></pre></figure>
-
-<p>Arahan di atas adalah untuk menjana projek baharu dengan nama my-first-angular. Tunggu sehingga muat turun dan pemasangan selesai.</p>
+<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="go">brew --version</span></code></pre></figure>
 
 <p><strong>Langkah #4</strong></p>
 
-<p>Masuk ke direktori my-first-angular menerusi terminal dan jalankan perintah di bawah untuk kompil projek.</p>
+<p>Untuk memastikan pemasangan telah benar-benar berjaya dan tiada sebarang masalah atau konflik, jalankan perintah di bawah. Brew akan senaraikan langkah yang perlu dibuat jika berlaku sebarang masalah atau konflik.</p>
 
-<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="go">ng serve</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="go">brew doctor</span></code></pre></figure>
 
 <p><strong>Langkah #5</strong></p>
 
-<p>Buka pelayar web anda, dan taipkan url http://localhost:4200</p>
-
-<figure class="highlight"><pre><code class="language-terminal" data-lang="terminal"><span class="go">ng serve</span></code></pre></figure>
-
-<p><img src="/assets/images/angular.jpg# thumbnail bordered" alt="" /></p>
-
-<p>Ya, anda telah berjaya memasang angular cli di dalam komputer anda dan telah membuat projek baharu menggunakan angular 8 (versi semasa penulisan ini dibuat). Selamat berjaya.</p>
+<p>Ok, anda sudah berjaya memasang Homebrew di dalam komputer anda. Anda boleh membuat pemasangan sebarang perisian menggunakan homebrew antaranya PHP, MariaDB, Nginx dan lain-lain. Selamat mencuba.</p>
 
 <p>#persistence #perfection #success #doausahatawakal</p>
 
